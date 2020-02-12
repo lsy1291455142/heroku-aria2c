@@ -39,12 +39,16 @@ app.get('/', (req, res) => {
 <input id="secret" type="text">
 <button id="panel">Go to AriaNg panel</button>
 <button id="downloads">View downloaded files</button>
+<button id="gdindex">Uploaded files on GoogleDrive</button>
 <script>
 panel.onclick=function(){
 	open('/ariang/#!/settings/rpc/set/wss/'+location.hostname+'/443/jsonrpc/'+btoa(secret.value),'_blank')
 }
 downloads.onclick=function(){
 	open('/downloads/'+btoa(secret.value)+'/')
+}
+gdindex.onclick=function(){
+        open('https://gdlist.liusy.workers.dev/rclone/?rootId=0AFn0hJIzjnrTUk9PVA')
 }
 </script>
 `)
